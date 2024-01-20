@@ -64,7 +64,7 @@ export const routes: Routes = [
             component: ProductCreateComponent,
         },
         {
-            path: "products_edit/:idPr",
+            path: "products_edit/:id",
             component: ProductEditComponent,
         }
     ]

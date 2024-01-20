@@ -14,7 +14,7 @@ import { Category } from '../../../type/category';
   styleUrl: './product-edit.component.css'
 })
 export class ProductEditComponent {
-  productId: string | undefined;
+  productId: string = "";
 
   productEdit: ProductAdd = {
     title: '',
@@ -37,8 +37,10 @@ export class ProductEditComponent {
       .getCategoryListAdmin()
       .subscribe((categories) => (this.categoryList = categories));
     // Lay ProductId From Url
-    this.route.params.subscribe((param) => {
-      this.productId = param['id'];
+    this.route.paramMap.subscribe((param) => {
+      this.productId = String(param.get("id"));
+      console.log(this.productId);
+      
       return this.getProductDetail();
     });
   }
