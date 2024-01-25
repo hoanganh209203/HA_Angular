@@ -1,13 +1,13 @@
 import { Routes } from '@angular/router';
 import { HomepageComponent } from './pages/homepage/homepage.component';
-import { ProductsComponent } from './pages/admin/products/products.component';
+import { ProductsComponent } from './pages/admin/admin_product/products/products.component';
 import { AdminsComponent } from './layout/admins/admins.component';
-import { ProductCreateComponent } from './pages/admin/product-create/product-create.component';
-import { ProductEditComponent } from './pages/admin/product-edit/product-edit.component';
+import { ProductCreateComponent } from './pages/admin/admin_product/product-create/product-create.component';
+import { ProductEditComponent } from './pages/admin/admin_product/product-edit/product-edit.component';
 import { ProductDestailComponent } from './components/product-destail/product-destail.component';
 import { HomeComponent } from './layout/home/home.component';
-import { NotFoundComponent } from './components/not-found/not-found.component';
-import { AdminPageComponent } from './pages/admin/admin-page/admin-page.component';
+import { CategorisesComponent } from './pages/admin/admin_category/categorises/categorises.component';
+import { AdminPageComponent } from './pages/admin/admin_product/admin-page/admin-page.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 export const routes: Routes = [
@@ -76,7 +76,10 @@ export const routes: Routes = [
         {
             path: "products_edit/:id",
             component: ProductEditComponent,
-        }
+        },{
+          path: "category",
+          component: CategorisesComponent,
+      }
     ]
 },
 ];

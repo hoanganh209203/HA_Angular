@@ -2,9 +2,9 @@ import { Component, inject } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
-import { Product} from '../../../type/product';
-import { ProductService } from '../../../service/Product/product.service'; // import services
-import { DescriptionPipe } from '../../../pipes/description.pipe';
+import { Product} from '../../../../type/product';
+import { ProductService } from '../../../../service/Product/product.service'; // import services
+import { DescriptionPipe } from '../../../../pipes/description.pipe';
 @Component({
   selector: 'app-products',
   standalone: true,

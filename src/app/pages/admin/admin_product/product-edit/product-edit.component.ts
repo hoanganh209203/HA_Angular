@@ -1,11 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { ProductService } from '../../../service/Product/product.service'; // import services
-import { ProductAdd } from '../../../type/product';
-import { CategoryService } from '../../../service/categorises/category.service';
+import { ProductService } from '../../../../service/Product/product.service'; // import services
+import { ProductAdd } from '../../../../type/product';
+import { CategoryService } from '../../../../service/categorises/category.service';
 import { NgFor } from '@angular/common';
-import { Category } from '../../../type/category';
+import { Category } from '../../../../type/category';
 @Component({
   selector: 'app-product-edit',
   standalone: true,
