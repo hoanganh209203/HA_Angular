@@ -8,6 +8,8 @@ import { ProductDestailComponent } from './components/product-destail/product-de
 import { HomeComponent } from './layout/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AdminPageComponent } from './pages/admin/admin-page/admin-page.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 export const routes: Routes = [
   // route '/' = page Home
   // path, component
@@ -42,6 +44,14 @@ export const routes: Routes = [
     ]
 },
   // { path: 'admin', component: ProductsComponent },
+  {
+    path: "login",
+    component: LoginComponent,
+  },
+  {
+    path: "signup",
+    component: RegisterComponent,
+  },
   {
     path: "admin",
     component: AdminsComponent,

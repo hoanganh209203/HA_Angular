@@ -32,6 +32,7 @@ export class HeaderComponent {
       label: 'Admin',
       link: '/admin',
     },
+    { label: "Login", link: "/login" },
    
   ]; // NgFor
   navigationHiddenOrShow: boolean = true;
