@@ -23,4 +23,16 @@ ngOnInit(): void {
     this.cateList = data
   })
 }
+handleDeleteCategory(id: string) {
+  if (window.confirm('Do you really remove product?')) {
+    this.categoryService
+      .deleteCategoryById(id)
+      .subscribe(
+        () =>
+          (this.cateList = this.cateList.filter(
+            (cate) => cate.id !== id
+          ))
+      );
+  }
+}
 }
