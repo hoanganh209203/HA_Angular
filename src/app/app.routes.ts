@@ -10,6 +10,8 @@ import { CategorisesComponent } from './pages/admin/admin_category/categorises/c
 import { AdminPageComponent } from './pages/admin/admin_product/admin-page/admin-page.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { CateCreateComponent } from './pages/admin/admin_category/cate-create/cate-create.component';
+import { CateEditComponent } from './pages/admin/admin_category/cate-edit/cate-edit.component';
 export const routes: Routes = [
   // route '/' = page Home
   // path, component
@@ -79,7 +81,13 @@ export const routes: Routes = [
         },{
           path: "category",
           component: CategorisesComponent,
-      }
+      },{
+        path: "category_create",
+        component: CateCreateComponent,
+    },{
+      path: "category_edit/:id",
+      component: CateEditComponent,
+  },
     ]
 },
 ];

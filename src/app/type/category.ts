@@ -4,3 +4,4 @@ export type Category = {
    
   };
   
+  export type CategoryAdd = Omit<Category, 'id'>
