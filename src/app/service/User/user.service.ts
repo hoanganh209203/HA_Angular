@@ -2,13 +2,12 @@ import { Injectable , inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { User,Login,Register } from '../../type/User';
-import { configHeaders } from '../../../config/viewLocal';
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  apiUrl = 'https://web208-angular-backend.vercel.app/auth'; // khai bao apiUrl
-  http = inject(HttpClient); // inject bien http
+  apiUrl = 'https://web208-angular-backend.vercel.app/auth';
+  http = inject(HttpClient);
 
   constructor() {}
     

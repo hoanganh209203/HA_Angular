@@ -3,9 +3,9 @@ import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
-import { UserService } from '../../service/User/user.service';
-import { userLocal } from '../../../config/viewLocal';
 import { ToastrService } from 'ngx-toastr';
+import { UserService } from '../../service/User/user.service';
+import { userLocal } from '../../config/viewLocal';
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -27,7 +27,7 @@ export class LoginComponent {
         userLocal.setUserLocal({user:response.user, accessToken:response.accessToken})
         this.toastr.success(response.message)
         if(response.user.role == 'member'){
-          this.router.navigateByUrl('')
+          this.router.navigateByUrl('/')
         }else{
           this.router.navigateByUrl('/admin/dashboard')
         }
