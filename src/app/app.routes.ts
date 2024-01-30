@@ -12,6 +12,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { CateCreateComponent } from './pages/admin/admin_category/cate-create/cate-create.component';
 import { CateEditComponent } from './pages/admin/admin_category/cate-edit/cate-edit.component';
+import { UserListComponent } from './pages/admin/admin_user/user-list/user-list.component';
 export const routes: Routes = [
   // route '/' = page Home
   // path, component
@@ -19,33 +20,25 @@ export const routes: Routes = [
     path: "",
     component: HomeComponent,
     children: [
-        {
-            path: "",
-            redirectTo: "/home",
-            pathMatch: "full",
-        },
-        {
-            path: 'home',
-            component: HomepageComponent,
+      {
+        path: "",
+        redirectTo: "/home",
+        pathMatch: "full",
+      },
+      {
+        path: 'home',
+        component: HomepageComponent,
 
-        },
-      //   {
-      //     path: 'admin',
-      //     component: ProductsComponent,
+      },
 
-      // },
-        {
-            path: "product_detail/:idPr",
-            component: ProductDestailComponent,
-        },
-      //   {
-      //     path: "**",
-      //     component: NotFoundComponent,
-      // },
-       
+      {
+        path: "product_detail/:idPr",
+        component: ProductDestailComponent,
+      },
+
     ]
-},
-  // { path: 'admin', component: ProductsComponent },
+  },
+
   {
     path: "login",
     component: LoginComponent,
@@ -54,40 +47,45 @@ export const routes: Routes = [
     path: "signup",
     component: RegisterComponent,
   },
+
+
   {
     path: "admin",
     component: AdminsComponent,
     children: [
-        {
-            path: '',
-            redirectTo: "/admin/dashboard",
-            pathMatch: "full"
-        },
-        {
-            path: "dashboard",
-            component: AdminPageComponent,
-        },
-        {
-            path: "products",
-            component:  ProductsComponent,
-        },
-        {
-            path: "products_create",
-            component: ProductCreateComponent,
-        },
-        {
-            path: "products_edit/:id",
-            component: ProductEditComponent,
-        },{
-          path: "category",
-          component: CategorisesComponent,
-      },{
+      {
+        path: '',
+        redirectTo: "/admin/dashboard",
+        pathMatch: "full"
+      },
+      {
+        path: "dashboard",
+        component: AdminPageComponent,
+      },
+      {
+        path: "products",
+        component: ProductsComponent,
+      },
+      {
+        path: "products_create",
+        component: ProductCreateComponent,
+      },
+      {
+        path: "products_edit/:id",
+        component: ProductEditComponent,
+      }, {
+        path: "category",
+        component: CategorisesComponent,
+      }, {
         path: "category_create",
         component: CateCreateComponent,
-    },{
-      path: "category_edit/:id",
-      component: CateEditComponent,
-  },
+      }, {
+        path: "category_edit/:id",
+        component: CateEditComponent,
+      }, {
+        path: "user_list",
+        component: UserListComponent,
+      },
     ]
-},
+  },
 ];
