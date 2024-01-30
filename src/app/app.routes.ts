@@ -58,10 +58,12 @@ export const routes: Routes = [
         redirectTo: "/admin/dashboard",
         pathMatch: "full"
       },
+      //Home admin
       {
         path: "dashboard",
         component: AdminPageComponent,
       },
+      //Product admin
       {
         path: "products",
         component: ProductsComponent,
@@ -73,7 +75,9 @@ export const routes: Routes = [
       {
         path: "products_edit/:id",
         component: ProductEditComponent,
-      }, {
+      }, 
+      //Category admin
+      {
         path: "category",
         component: CategorisesComponent,
       }, {
@@ -82,7 +86,9 @@ export const routes: Routes = [
       }, {
         path: "category_edit/:id",
         component: CateEditComponent,
-      }, {
+      },
+      //User admin
+      {
         path: "user_list",
         component: UserListComponent,
       },
