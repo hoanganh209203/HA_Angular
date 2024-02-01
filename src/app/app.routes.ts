@@ -13,6 +13,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { CateCreateComponent } from './pages/admin/admin_category/cate-create/cate-create.component';
 import { CateEditComponent } from './pages/admin/admin_category/cate-edit/cate-edit.component';
 import { UserListComponent } from './pages/admin/admin_user/user-list/user-list.component';
+import { UserCreateComponent } from './pages/admin/admin_user/user-create/user-create.component';
 export const routes: Routes = [
   // route '/' = page Home
   // path, component
@@ -91,6 +92,10 @@ export const routes: Routes = [
       {
         path: "user_list",
         component: UserListComponent,
+      },
+      {
+        path: "user_add",
+        component: UserCreateComponent,
       },
     ]
   },

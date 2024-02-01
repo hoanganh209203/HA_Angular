@@ -6,7 +6,8 @@ export const userLocal = {
         }
         return null
     },
-    setUserLocal(infoUser: any) {
+    setUserLocal(infoUser: any) {console.log(infoUser);
+    
         localStorage.setItem('USER', JSON.stringify(infoUser))
     },
     remove() {
