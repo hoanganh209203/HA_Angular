@@ -28,7 +28,7 @@ onSubmit(userForm:any){
   if(userForm.valid){
     this.userService.register(this.formData).subscribe((response)=>{
       this.toast.success(response.message);
-      this.routerLodation.navigateByUrl('/admin/user/list')
+      this.routerLodation.navigateByUrl('/admin/user_list')
     },error=>{
       this.toast.error(error.error.message)
     }
