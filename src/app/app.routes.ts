@@ -15,6 +15,7 @@ import { CateEditComponent } from './pages/admin/admin_category/cate-edit/cate-e
 import { UserListComponent } from './pages/admin/admin_user/user-list/user-list.component';
 import { UserCreateComponent } from './pages/admin/admin_user/user-create/user-create.component';
 import { UserEditComponent } from './pages/admin/admin_user/user-edit/user-edit.component';
+import { ProductDetailComponent } from './pages/admin/admin_product/product-detail/product-detail.component';
 export const routes: Routes = [
   // route '/' = page Home
   // path, component
@@ -78,6 +79,7 @@ export const routes: Routes = [
         path: "products_edit/:id",
         component: ProductEditComponent,
       }, 
+      {path:'products_detail/:id',component:ProductDetailComponent},
       //Category admin
       {
         path: "category",
