@@ -8,20 +8,20 @@ import { Observable } from 'rxjs';
 export class ProductService {
 
   // call api
-  apiUrl = 'https://6523d369ea560a22a4e8e7da.mockapi.io/products';
+  // apiUrl = 'https://6523d369ea560a22a4e8e7da.mockapi.io/products';
   apiAdminUrl = 'https://6523d369ea560a22a4e8e7da.mockapi.io/products'; // khai bao apiUrl
 
   http = inject(HttpClient); // inject bien http
   constructor() {}
 
   getProductList(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.apiUrl); //axios.get(apiUrl)
+    return this.http.get<Product[]>(this.apiAdminUrl); //axios.get(apiUrl)
   }
   getDetailProduct(id: number): Observable<Product> {
-    return this.http.get<Product>(`${this.apiUrl}/${id}`);
+    return this.http.get<Product>(`${this.apiAdminUrl}/${id}`);
   }
   getProductsRelatedToCategory(category: string): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.apiUrl}/category/${category}`);
+    return this.http.get<Product[]>(`${this.apiAdminUrl}/category/${category}`);
   }
   getProductListAdmin(): Observable<Product[]> {
     return this.http.get<Product[]>(this.apiAdminUrl); //axios.get(apiUrl)
@@ -44,5 +44,12 @@ export class ProductService {
 
   updateProductById(product: ProductAdd, id: string) {
     return this.http.put<Product>(`${this.apiAdminUrl}/${id}`, product);
+  }
+  searchProduct(params:any){
+    return this.http.get<any>(`${this.apiAdminUrl}/search`,{params:{title:params}})
+
+  }
+  getProductDetail(id: string):Observable<Product>{
+    return this.http.get<Product>(`${this.apiAdminUrl}/${id}`)
   }
 }
