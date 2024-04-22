@@ -9,7 +9,7 @@ export class ProductService {
 
   // call api
   // apiUrl = 'https://6523d369ea560a22a4e8e7da.mockapi.io/products';
-  apiAdminUrl = 'https://6523d369ea560a22a4e8e7da.mockapi.io/products'; // khai bao apiUrl
+  apiAdminUrl = 'https://66267006052332d55322deab.mockapi.io/shop_hoanganh/product'; // khai bao apiUrl
 
   http = inject(HttpClient); // inject bien http
   constructor() {}
